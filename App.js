@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import FormContainer from './components/FormContainer';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>hello</Text>
+    <FormContainer></FormContainer>
     </View>
   );
 }
@@ -17,12 +18,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-import React from 'react';
-import RootComponent from './navigation/RootComponent';
-
-export default class App extends React.Component {
-  render() {
-    return <RootComponent />;
-  }
-}
