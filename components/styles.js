@@ -1,5 +1,4 @@
 import { View, TextInput, Text, Alert, Button, FlatList, StyleSheet } from 'react-native';
-import ListItem from './ListItem';
 import { render } from 'react-dom';
 import Constants from 'expo-constants';
 

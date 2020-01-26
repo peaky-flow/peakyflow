@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, TextInput, Text, CheckBox, Alert, Button, FlatList, StyleSheet } from 'react-native';
 import ListItem from './ListItem';
+import SendData from './SendData';
 import styles from './styles'
 import { render } from 'react-dom';
 import Constants from 'expo-constants';
@@ -74,6 +75,7 @@ export default class PeakFlowFields extends Component {
           style={{ height: 60, marginBottom: 120 }}
           onPress={this.storeValue.bind(this)}
         />
+        <SendData></SendData>
         <View style={{ height: 400, marginTop: 20 }}>
           <FlatList
             style={styles.container}
