@@ -21,10 +21,10 @@ export default class SendData extends Component {
       subject: "Peak flow data",
       htmlBody: "<h1>Peak flow data</h1><p>Hello</p>",
       attachmentPaths: [
-        RNFS.DocumentDirectoryPath + "/results.csv"
+        RNFS.DocumentDirectoryPath + "/asthma.csv"
       ],
       attachmentNames: [
-        "results.csv"
+        "asthma.csv"
       ], 
       attachmentTypes: ["csv"] //needed for android, in ios-only application, leave it empty: attachmentTypes:[]. Generally every img(either jpg, png, jpeg or whatever) file should have "img", and every other file should have its corresponding type.
     })
