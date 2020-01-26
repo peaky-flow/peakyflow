@@ -43,10 +43,13 @@ export default class PeakFlowFields extends Component {
   }
   storeValue(){
     var listValues = this.state.listValues;
+    var t = new Date();
+    var hours = t.getHours();
+    var minutes = t.getMinutes();
     listValues.unshift({
-      pefr: this.state.pefr, workDay: this.state.workDay
+      pefr: this.state.pefr, workDay: this.state.workDay, date: "26/01", time: hours + ":" + minutes
     })
-    this.setState({listValues: listValues, value: null});
+    this.setState({listValues: listValues, pefr: null, workDay: false});
     var listValues = JSON.stringify(this.state.listValues);
       FileSystem.writeAsStringAsync(this.path, listValues).then((success) => {
     })
@@ -65,7 +68,7 @@ export default class PeakFlowFields extends Component {
       />
       <View style={{ flexDirection: 'row', justifyContent: "center"}}>
       <CheckBox
-      value={this.state.checked}
+      value={this.state.workDay}
       onValueChange={() => this.setState({ workDay: !this.state.workDay })}
       />
       <Text style={{ marginTop: 5}}>Work day</Text>
@@ -84,6 +87,8 @@ export default class PeakFlowFields extends Component {
               <ListItem
                 pefr={item.pefr}
                 workDay={item.workDay}
+                date={item.date}
+                time={item.time}
               />
             )}
             keyExtractor={(item, index) => index.toString()}
