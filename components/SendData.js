@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, TextInput, Text, Alert, Button } from 'react-native';
 import { render } from 'react-dom';
-import RNSmtpMailer from "react-native-smtp-mailer";
+import RNSmtpMailer from 'react-native-smtp-mailer';
 
 export default class SendData extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ export default class SendData extends Component {
       username: "peakyflow1@gmail.com",
       password: pwd,
       from: "peakyflow1@gmail.com",
-      recipients: "peakyflow1@gmail.com",
+      recipients: "peakyflow1@gmail.com, irc91914@gmail.com",
       subject: "Peak flow data",
       htmlBody: "<h1>Peak flow data</h1><p>Hello</p>",
       attachmentPaths: [
