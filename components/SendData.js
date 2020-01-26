@@ -9,7 +9,7 @@ export default class SendData extends Component {
     this.value;
   }
 
-  doSendMail(pwd, csv){
+  doSendMail(pwd){
     RNSmtpMailer.sendMail({
       mailhost: "smtp.gmail.com",
       port: "465",
